@@ -48,6 +48,9 @@ setup-final:
 
 setup: setup-brew setup-py setup-final  ## Setup everything
 
+test:
+	which kubeval
+	[[ `python -V` == "Python $$PYENV_PYTHON_VERSION"  ]] || exit 1
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
