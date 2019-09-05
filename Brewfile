@@ -26,5 +26,13 @@ brew "pyenv"
 brew "telnet"
 brew "tfenv"
 brew "zlib"
+brew "rbenv"
+brew "ruby-build"
 
+cask virtualbox
+cask virtualbox-extension-pack
+cask vagrant
+
+after vagrant plugin install vagrant-vbguest
 after tfenv install 0.11.4
+

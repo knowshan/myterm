@@ -3,13 +3,19 @@
 # Compiler flags
 export CPPFLAGS = -I $(shell xcrun --show-sdk-path)/usr/include
 export LDFLAGS = -I $(shell xcrun --show-sdk-path)/usr/lib
-export PYENV_VERSION = 3.7.0
+export PYENV_PYTHON_VERSION = 3.7.0
+export RBENV_RUBY_VERSION = 2.6.4
 
+setup-ruby: ## Ruby setup using rbenv
+	rbenv install -s $$RBENV_RUBY_VERSION
+	grep -q 'rbenv init -' $$HOME/.profile || echo 'eval "$$(rbenv init -)"' >> $$HOME/.profile
+	rbenv global $$RBENV_RUBY_VERSION
+	$$HOME/.rbenv/shims/gem install bundler
 
 setup-py: ## Python setup using pyenv
-	pyenv install -s $$PYENV_VERSION
+	pyenv install -s $$PYENV_PYTHON_VERSION
 	grep -q "pyenv init -" $$HOME/.profile || echo 'eval "$$(pyenv init -)"' >> $$HOME/.profile
-	pyenv global $$PYENV_VERSION
+	pyenv global $$PYENV_PYTHON_VERSION
 	$$HOME/.pyenv/shims/pip install -r PythonCommonPackages.txt
 
 
