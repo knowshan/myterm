@@ -1,0 +1,7 @@
+os: osx
+
+sudo: required
+
+script:
+- make setup 
+
