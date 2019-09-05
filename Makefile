@@ -27,6 +27,7 @@ update-mac: ## Install xcode CLI tools and updates
 setup-brew: ## Setup Homebrew and install brew packages
 	ruby < BrewInstall-764ecdc.rb # https://raw.githubusercontent.com/Homebrew/install/764ecdce6035e41d37be9406d6be9a8ef9e43320/install
 	brew install rcmdnk/file/brew-file
+	mkdir -p $$HOME/.config/brewfile
 	if [ -f $$(brew --prefix)/etc/brew-wrap ]; then \
 	  source $$(brew --prefix)/etc/brew-wrap ; \
 	  brew version; \
