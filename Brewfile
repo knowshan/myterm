@@ -1,6 +1,3 @@
-tap "caskroom/cask"
-tap "caskroom/versions"
-
 brew "autoconf"
 brew "awscli"
 brew "aws-iam-authenticator"
@@ -29,10 +26,14 @@ brew "zlib"
 brew "rbenv"
 brew "ruby-build"
 
+cask corretto
 cask virtualbox
 cask virtualbox-extension-pack
 cask vagrant
+cask google-chrome
+cask firefox
+cask visual-studio-code
 
 after vagrant plugin install vagrant-vbguest
-after tfenv install 0.11.4
+after tfenv install 0.12.17
 
