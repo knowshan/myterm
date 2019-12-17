@@ -7,6 +7,7 @@ brew "brew-pip"
 brew "curl"
 brew "dep"
 brew "direnv"
+brew "docker-compose"
 brew "gcc"
 brew "git"
 brew "go"
@@ -16,6 +17,7 @@ brew "jq"
 brew "kubernetes-cli"
 brew "kubernetes-helm"
 brew "garethr/kubeval/kubeval"
+brew "git-duet/tap/git-duet"
 brew "nmap"
 brew "packer"
 brew "prometheus"
@@ -33,6 +35,8 @@ cask vagrant
 cask google-chrome
 cask firefox
 cask visual-studio-code
+cask docker
+cask textmate
 
 after vagrant plugin install vagrant-vbguest
 after tfenv install 0.12.17
