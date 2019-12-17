@@ -11,6 +11,7 @@ On a brand new Mac, there are no developer tools (make, git, xcode etc.) and hen
         curl -L -o ~/gitpro/myterm.zip https://github.com/knowshan/myterm/archive/master.zip
         unzip myterm.zip
         mv myterm-master myterm
+	cd myterm
         ./BrewInstall-764ecdc.rb
         cd ~
         rm -rf myterm
